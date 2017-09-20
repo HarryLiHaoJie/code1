@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build
+END
+vue-loader.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/vue-loader.conf.js
+END
+webpack.base.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/webpack.base.conf.js
+END
+dev-client.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/dev-client.js
+END
+webpack.dev.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/webpack.dev.conf.js
+END
+webpack.test.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/webpack.test.conf.js
+END
+build.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/build.js
+END
+utils.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/utils.js
+END
+dev-server.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/dev-server.js
+END
+check-versions.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/check-versions.js
+END
+webpack.prod.conf.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/build/webpack.prod.conf.js
+END

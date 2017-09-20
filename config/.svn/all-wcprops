@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config
+END
+dev.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config/dev.env.js
+END
+test.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config/test.env.js
+END
+index.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config/index.js
+END
+new_file.txt
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config/new_file.txt
+END
+prod.env.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xinhuagolden_java/!svn/ver/14/xhgolden-h5/config/prod.env.js
+END

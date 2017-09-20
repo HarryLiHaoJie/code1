@@ -1,0 +1,47 @@
+<template>
+	<div class="safe">
+		<div class="safe-header">
+			<img src="../assets/img/save_bg.png"/>
+		</div>
+		<div class="safe-content">
+			<div class="content">
+				<img src="../assets/img/bao_header.png"/>
+        <div style="padding: 0 5%;">
+          <div style="text-align: center;">
+            <img style="width: 18.7%; margin-right: 32%" src="../assets/img/icon0.png"/>
+            <img style="width: 18.7%;" src="../assets/img/icon1.png"/>
+          </div>
+          <p>供应链金融、车服金融，合规不触碰监管红线，不设资金池，支付、赎回、债权转让金融体验安全规范。</p>
+        </div>
+			</div>
+			<div class="content">
+				<img src="../assets/img/ji_header.png"/>
+				<ul class="clearfix">
+					<li>
+						<img src="../assets/img/icon2.png"/>
+						<p>支付安全：第三方支付通道。</p>
+					</li>
+					<li style="margin-right: 0;">
+						<img src="../assets/img/icon3.png"/>
+						<p>认证安全：CFCA安全认证，采用SSL/DV服务器证书加密传输数据。</p>
+					</li>
+					<li style="margin-bottom: 0;">
+						<img src="../assets/img/icon4.png"/>
+						<p>信息安全：银行级防护架构，多维度隐私保护和认证机制，云盾服务和防火墙，容灾备份设计保障数据永久保存。</p>
+					</li>
+					<li style="margin-right: 0;margin-bottom: 0;">
+						<img src="../assets/img/icon5.png"/>
+						<p>架构安全：业界最先进的软件体系架构设计，确保平台高性能，高可用性，高扩展。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</template>
+
+<script>
+</script>
+
+<style>
+	@import '../assets/css/help_center.css';
+</style>

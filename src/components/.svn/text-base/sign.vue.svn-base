@@ -1,0 +1,121 @@
+<template>
+	<div class="sign">
+		<div class="mask" v-if="mask" @touchmove.prevent>
+			<div class="mask-content">
+				<div class="login_bg"><img src="../assets/img/login_bg.png"/></div>
+				<span>您还未登录，请先登录！</span>
+				<p v-on:click="nologin()">点击登录</p>
+			</div>
+		</div>
+		<div class="gold">
+			<img v-bind:class="{'addimg':showimg}" src="../assets/img/jin.png"/>
+			<div class="fen" v-bind:class="{'add':active}">+{{addday}}</div>
+		</div>
+		<div class="day">
+			本月您已签到<br /><span>{{day}}</span>天
+		</div>
+		<div class="integral">
+			当前积分：<span>{{totalPoint}}</span>
+		</div>
+		<div class="qian_btn">
+			<button v-bind:disabled="jin" @click="change()"><img  :src="imgsrc"/></button>
+		</div>
+		<div class="rules">
+			<img src="../assets/img/guize.png"/>
+			<p class="p-1">每日签到获得<span>+30积分</span>;</p>
+			<p class="p-2">每月累计签到8天，额外奖励<span>+50积分</span>;</p>
+			<p class="p-3">每月累计签到18天，额外奖励<span>+100积分</span>;</p>
+			<p class="p-4">每月累计签到28天，额外奖励<span>+150积分</span>;</p>
+			<router-link :to="{ path:'./integral_detail',query:{ source:this.$route.query.source,auth:this.$route.query.auth }}">
+			    <div class="ji_btn">查看积分明细</div>
+			</router-link>
+		</div>
+	</div>
+</template>
+
+<script>
+import common from "../assets/js/common.js"
+export default {
+	data: function() {
+		return {
+			imgsrc: require('../assets/img/wei.png'),
+			active: false,
+			showimg: false,
+			bol: true,
+			day: '',
+			totalPoint: '',
+			addday: '',
+			jin: false,
+			mask: false
+		}
+	},
+	created: function(){
+        this.mSignInfomation();//定义方法
+    },
+	methods: {
+		mSignInfomation: function () {
+			var _this = this;
+			var auth = _this.$route.query.auth;
+			_this.$http.post('/Product/User/mSignInfomation',{
+	        	parameters:'{"authorization":"'+ auth +'"}'   		
+	        	
+	        })
+	          .then(function (res) {
+	          	if(res.data.end == 'ok'){
+	          		_this.mask = false;
+	          		if(res.data.isSign == 'yes'){
+		          		_this.imgsrc = require('../assets/img/yi.png');
+		          		_this.jin = true;
+		          	}else{
+		          		_this.imgsrc = require('../assets/img/wei.png');
+		          		_this.jin = false;
+		          	}
+		        	_this.day = res.data.signDays;
+		        	_this.totalPoint = res.data.totalPoint
+	          	}else{
+	          		_this.mask = true;
+	          	}
+	        })
+	          .catch(function(err){
+				console.log(err)
+			})
+		},
+		nologin: function () {
+			var source = this.$route.query.source;
+			this.start(source);
+		},
+		change: function() {
+			var _this = this;
+			var auth = _this.$route.query.auth;
+	        if (this.bol) {
+	        	
+	        	_this.$http.post('/Product/User/saveMSignIn',{
+		        	parameters:'{"authorization":"'+ auth +'"}'
+		        })
+		          .then(function (res) {
+		          	if(res.data.end == 'ok'){
+		          		_this.imgsrc = require('../assets/img/yi.png');
+			          	_this.active = true;
+			          	_this.showimg = true;
+			          	_this.totalPoint = res.data.totalPoint;
+			          	_this.day = res.data.signDays;
+			          	_this.addday = res.data.point;
+		          	}else{
+		          		_this.start();
+		          	}
+		        })
+		          .catch(function(err){
+					console.log(err)
+				})
+		        this.bol = false
+	        } else{
+	        	return false
+	        }
+		}
+	}
+}
+</script>
+
+<style>
+	@import '../assets/css/help_center.css';
+</style>

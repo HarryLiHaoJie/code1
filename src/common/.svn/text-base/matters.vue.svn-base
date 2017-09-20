@@ -1,0 +1,86 @@
+<template>
+	<div class="art-list">
+		<div class="art-box" v-for="(todo1, index) in todos1" :class="[todo1.select ? activeClass : '']" v-on:click="tab2(todos1,index)">
+			<div class="art-title">{{todo1.text}}</div>
+			<div v-if="seen" v-html="todo1.text1" class="art-answ">{{todo1.text1}}</div>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'hello',
+		data: function() {
+			return {
+				activeClass: 'select',
+				seen: false,
+				todos1: [{
+						text: '如何选择理财产品？',
+						text1: '枫叶理财提供多类理财产品，可根据自己实际情况选择；<br/> 新手标：<br/>新手专享投资期限15天年化收益I5%起投金额100元（每人限购一次）<br/>常规标：<br/>货融宝月标投资期限28天年化收益8%，起投金额500元<br/>货融宝半季标投资期限46天年化收益8.5%，起投金额500元<br/>货融宝双月标投资期限58天年化收益9%，起投金额500元<br/>货融宝季标投资期限88天年化收益9.8%，起投金额500元<br/>货融宝双季标投资期限178年化收益12%，起投金额500元<br/>账款宝月标投资期限28天年化收益8.2%，起投金额500元<br/>账款宝半季标投资期限46天年化收益8.7%，起投金额500元<br/>账款宝双月标投资期限58天年化收益9.2%，起投金额500元<br/>账款宝季标投资期限88天年化收益10%，起投金额500元<br/>账款宝双季标投资期限178天年化收益12.1%，起投金额500元<br/><br/>平台还会不定时提供节日标、爆款标，具有时间短、收益高等特点，敬请期待。',
+						select: false
+					},
+					{
+						text: '如何购买理财产品？',
+						text1: '1．已注册账户：成功登录枫叶理财账户，点击“理财产品”按钮，选择心仪的理财产品，点击底部的“立即投资”，输入购买金额并点击“立即支付”，即可完成购买成功。<br/>2．未注册账户：请先注册枫叶理财账号，并进行实名认证；具体参考注册流程。',
+						select: false
+					},
+					{
+						text: '枫叶理财的理财收益是多少？',
+						text1: '新手标：<br/>新手专享投资期限15天年化收益I5%起投金额100元（每人限购一次）<br/>常规标：<br/>货融宝月标投资期限28天年化收益8%，起投金额500元<br/>货融宝半季标投资期限46天年化收益8.5%，起投金额500元<br/>货融宝双月标投资期限58天年化收益9%，起投金额500元<br/>货融宝季标投资期限88天年化收益9.8%，起投金额500元<br/>货融宝双季标投资期限178年化收益12%，起投金额500元<br/>账款宝月标投资期限28天年化收益8.2%，起投金额500元<br/>账款宝半季标投资期限46天年化收益8.7%，起投金额500元<br/>账款宝双月标投资期限58天年化收益9.2%，起投金额500元<br/>账款宝季标投资期限88天年化收益10%，起投金额500元<br/>账款宝双季标投资期限178天年化收益12.1%，起投金额500元',
+						select: false
+					},
+					{
+						text: '预估收益如何计算？',
+						text1: '预估收益 = 投资总金额×（年化收益率/365）×投资期限（天）',
+						select: false
+					},
+					{
+						text: '理财产品什么时候起息？',
+						text1: '所购买的产品将在T+1个工作日起息。',
+						select: false
+					},
+					{
+						text: '购买理财产品后，我能提前赎回吗？',
+						text1: '为了保护投资人的利益，不提供提前赎回。',
+						select: false
+					},
+					{
+						text: '购买产品到期后，本金和利息什么时候到枫叶理财账户？',
+						text1: '理财产品到期后，资金T+1个工作日返还到枫叶理财账户中。',
+						select: false
+					},
+					{
+						text: '最低投资额？',
+						text1: '新手专享 起投金额100元（每人限购一次）<br/> 货融宝 起投金额500元',
+						select: false
+					},
+					{
+						text: '为什么我无法进行投资？',
+						text1: '未通过实名认证。未绑定银行卡。 账户余额不足。理财产品当前状态为售罄。账户为冻结状态。',
+						select: false
+					}
+				]
+			}
+		},
+		methods: {
+			tab2: function(todos1, index) {
+				/*默认切换类的动作*/
+				todos1.forEach(function(el) {
+					el.select = false;
+				});
+//				todos1[index].select = true;
+				if (this.seen == false) {
+					todos1[index].select = true;
+					this.seen = true;
+				} else{
+					todos1[index].select = false;
+					this.seen = false;
+				}
+			}
+		}
+	}
+</script>
+
+<style>
+	@import '../assets/css/help_center.css';
+</style>
