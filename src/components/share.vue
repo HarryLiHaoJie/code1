@@ -71,7 +71,7 @@
 </template>
 
 <script>
-  import jquery from "../assets/js/jquery-1.11.2.min.js"
+  import jquery from "../../static/libs/jquery-1.11.2.min.js"
   export default {
     name: 'hello',
     data: function () {

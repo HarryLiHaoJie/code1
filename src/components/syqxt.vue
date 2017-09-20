@@ -15,8 +15,8 @@
 		},
 		mounted: function () {    //钩子函数，等于vue1.0中的ready
             this.$nextTick(function () {
-                require ('../assets/js/ichart.1.2.min.js');
-                require ('../assets/js/highcharts.js');
+                require ('../../static/libs/ichart.1.2.min.js');
+                require ('../../static/libs/highcharts.js');
             })
        	},
 		methods: {

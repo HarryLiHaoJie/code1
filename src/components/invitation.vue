@@ -151,8 +151,6 @@
 </template>
 
 <script>
-	import jquery from "../assets/js/jquery-1.11.2.min.js"
-
 
 	export default {
 		name: 'hello',
@@ -170,15 +168,15 @@
 		},
 		mounted: function () {    //钩子函数，等于vue1.0中的ready
             this.$nextTick(function () {
-                require ('../assets/js/jquery.qrcode.min.js');
+                require ('../../static/libs/jquery.qrcode.min.js');
             })
        	},
 		methods: {
 			invita: function () {
-				var auth = this.$route.query.auth;
-				var username = this.$route.query.username;
-//				var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
-//				var username = '18758263215';
+//				var auth = this.$route.query.auth;
+//				var username = this.$route.query.username;
+				 var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
+				 var username = '18758263215';
 				var _this = this;
 				_this.dis = true;
 				setTimeout(function () {
@@ -229,18 +227,20 @@
 			},
 			invitation: function() {
 
-				var auth = this.$route.query.auth;
-				var username = this.$route.query.username;
-//				var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
-//				var username = '18758263215';
+				// var auth = this.$route.query.auth;
+				// var username = this.$route.query.username;
+				var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
+				var username = '18758263215';
 				var _this = this;
 				_this.$http.post('/Product/User/showMyInvitation', {
 						parameters: '{"authorization":"'+ auth +'","username":"'+ username +'"}'
 					})
 					.then(function(res) {
+						alert('good')
 						var w=$(".cont1 .ewm").width();
 	        			var wpx=w+"px";
 						if(res.data.end == 'ok'){
+							alert(_this.friend)
 							_this.invit = res.data.inviteId;
 							_this.money = res.data.inviteEarn;
 							_this.friend = res.data.inviteNum;
