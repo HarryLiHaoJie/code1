@@ -3,9 +3,7 @@
 </template>
 
 <script>
-	import jquery from "../assets/js/jquery-1.11.2.min.js"
-	import ichart from "../assets/js/ichart.1.2.min.js"
-	import highcharts from "../assets/js/highcharts.js"
+	
 	export default {
 		name: 'hello',
 		data: function() {
