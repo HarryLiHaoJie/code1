@@ -10,7 +10,7 @@ export function formatDate(date, fmt) {
         's+': date.getSeconds(),
     }
     for (var k in message ) {
-        if (new RegExp(`(${k})`).test(fmt)) {
+        if (new RegExp('(${k})').test(fmt)) {
             var str = message[k] + '';
             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length === 1) ? str : padLeftZero(str));
         }

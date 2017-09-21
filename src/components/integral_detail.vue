@@ -28,19 +28,19 @@
 			}
 		},
 		filters: {
-			formatDate(time) {
+			formatDate:function(time) {
 				var date = new Date(time);
 				return formatDate(date, 'yyyy-MM-dd');
 			}
 		},
 		methods: {
-			onInfinite() {
+			onInfinite:function() {
 				var currentPage = Math.floor(this.list.length / 20 + 1);
 				var auth = this.$route.query.auth;
 				var source = this.$route.query.source;
 				this.$http.post('/Product/User/findMCoinRecordList', {
 					parameters: '{"authorization":"'+ auth +'","currentPage":"'+currentPage+'","pageSize":"20"}'
-				}).then((res) => {
+				}).then(function(res) {
 					if (res.data.end == 'ok') {
 						if(res.data.list.length) {
 							this.list = this.list.concat(res.data.list);

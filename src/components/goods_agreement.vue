@@ -135,33 +135,34 @@
 			}
 		},
 		created: function() {
-			this.onReload(); //定义方法
+			this._onReload(); //定义方法
 		},
 		methods: {
-			onReload() {
-				var auth = this.$route.query.auth;
-				var source = this.$route.query.source;
-				var contractId = this.$route.query.contractId
-				this.$http.post('Product/wapIndex/showContract', {
+			_onReload:function() {
+				var _this = this;
+				var auth = _this.$route.query.auth;
+				var source = _this.$route.query.source;
+				var contractId = _this.$route.query.contractId;
+				_this.$http.post('Product/wapIndex/showContract', {
 					parameters: '{"authorization":"'+ auth +'","contractId":"'+ contractId +'"}'
-				}).then((res) => {
+				}).then(function (res){
 					if (res.data.end == 'ok') {
 						console.log(res.data)
-						this.recordNum = res.data.recordNum;
-						this.cjr = res.data.cjr;
-						this.idCardCjr = res.data.idCardCjr;
-						this.realName = res.data.product.realName;
-						this.idcard = res.data.product.idcard;
-						this.carDingf = res.data.product.carDingf;
-						this.carDingfAddress = res.data.product.carDingfAddress;
-						this.copies = res.data.copies;
-						this.st = res.data.st;
-						this.coupon = res.data.coupon;
-						this.et = res.data.et;
-						this.lcqx = res.data.lcqx;
-						this.insert = res.data.insert;
-						this.annualEarnings = res.data.product.annualEarnings;
-						this.jkyt = res.data.product.jkyt;
+						_this.recordNum = res.data.recordNum;
+						_this.cjr = res.data.cjr;
+						_this.idCardCjr = res.data.idCardCjr;
+						_this.realName = res.data.product.realName;
+						_this.idcard = res.data.product.idcard;
+						_this.carDingf = res.data.product.carDingf;
+						_this.carDingfAddress = res.data.product.carDingfAddress;
+						_this.copies = res.data.copies;
+						_this.st = res.data.st;
+						_this.coupon = res.data.coupon;
+						_this.et = res.data.et;
+						_this.lcqx = res.data.lcqx;
+						_this.insert = res.data.insert;
+						_this.annualEarnings = res.data.product.annualEarnings;
+						_this.jkyt = res.data.product.jkyt;
 					}
 				});
 			}

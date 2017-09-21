@@ -140,20 +140,19 @@
 				annualEarnings: '',
 				jkyt: '',
 				insert: ''
-
 			}
 		},
 		created: function() {
-			this.onReload(); //定义方法
+			this.reload(); //定义方法
 		},
 		methods: {
-			onReload() {
+			reload:function() {
 				var auth = this.$route.query.auth;
 				var source = this.$route.query.source;
 				var contractId = this.$route.query.contractId
 				this.$http.post('/Product/wapIndex/showContract', {
 					parameters: '{"authorization":"'+ auth +'","contractId":"'+ contractId +'"}'
-				}).then((res) => {
+				}).then(function(res){
 					if (res.data.end == 'ok') {
 						this.recordNum = res.data.recordNum;
 						this.cjr = res.data.cjr;

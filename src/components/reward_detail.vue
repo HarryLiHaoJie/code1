@@ -46,36 +46,36 @@
 			}
 		},
 		filters: {
-			formatDate(time) {
+			formatDate:function(time) {
 				var date = new Date(time);
 				return formatDate(date, 'yyyy-MM-dd');
 			}
 		},
 		methods: {
-			onInfinite() {
+			onInfinite:function() {
 				var currentPage = Math.floor(this.list.length / 20 + 1);
 				var auth = this.$route.query.auth;
 				var source = this.$route.query.source;
-				this.$http.post('/Product/User/loadInviteEarnRecord', {
-					parameters: '{"authorization":"'+ auth +'","currentPage":"'+currentPage+'","type":"1"}'
-					}).then((res) => {
-					if (res.data.end == 'noData') {
-						this.nojilu = true;
-						this.jilu = false;
-					}else{
-						this.nojilu = false;
-						this.jilu = true;
-						if(res.data.list.length) {
-							this.list = this.list.concat(res.data.list);
-							this.$refs.infiniteLoading.$emit('$InfiniteLoading:loaded');
-							if(currentPage === res.data.allPage) {
-								this.$refs.infiniteLoading.$emit('$InfiniteLoading:complete');
-							}
-						} else {
-							this.$refs.infiniteLoading.$emit('$InfiniteLoading:complete');
-						}
-					}
-				});
+				//this.$http.post('/Product/User/loadInviteEarnRecord', {
+				//	parameters: '{"authorization":"'+ auth +'","currentPage":"'+currentPage+'","type":"1"}'
+				//	}).then((res) => {
+				//	if (res.data.end == 'noData') {
+				//		this.nojilu = true;
+				//		this.jilu = false;
+				//	}else{
+				//		this.nojilu = false;
+				//		this.jilu = true;
+				//		if(res.data.list.length) {
+				//			this.list = this.list.concat(res.data.list);
+				//			this.$refs.infiniteLoading.$emit('$InfiniteLoading:loaded');
+				//			if(currentPage === res.data.allPage) {
+				//				this.$refs.infiniteLoading.$emit('$InfiniteLoading:complete');
+				//			}
+				//		} else {
+				//			this.$refs.infiniteLoading.$emit('$InfiniteLoading:complete');
+				//		}
+				//	}
+				//});
 			}
 		},
 		components: {
