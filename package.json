@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "fast-uglifyjs-plugin": "^0.3.0",
+    "uglify-es": "github:mishoo/UglifyJS2#harmony",
     "v-tap": "^3.0.2",
     "vue": "^2.3.3",
     "vue-axios": "^2.0.2",
@@ -79,6 +81,7 @@
     "shelljs": "^0.7.6",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.8.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.8",
     "vue-event-calendar": "^1.4.6",
     "vue-loader": "^12.1.0",
