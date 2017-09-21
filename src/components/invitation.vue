@@ -173,10 +173,10 @@
        	},
 		methods: {
 			invita: function () {
-//				var auth = this.$route.query.auth;
-//				var username = this.$route.query.username;
-				 var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
-				 var username = '18758263215';
+				var auth = this.$route.query.auth;
+				var username = this.$route.query.username;
+//				 var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
+//				 var username = '18758263215';
 				var _this = this;
 				_this.dis = true;
 				setTimeout(function () {
@@ -227,10 +227,10 @@
 			},
 			invitation: function() {
 
-				// var auth = this.$route.query.auth;
-				// var username = this.$route.query.username;
-				var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
-				var username = '18758263215';
+				 var auth = this.$route.query.auth;
+				 var username = this.$route.query.username;
+//				var auth = 'b74c8700-1c3e-4ebf-802f-0cfb3691924f';
+//				var username = '18758263215';
 				var _this = this;
 				_this.$http.post('/Product/User/showMyInvitation', {
 						parameters: '{"authorization":"'+ auth +'","username":"'+ username +'"}'
