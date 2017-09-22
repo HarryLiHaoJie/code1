@@ -14,13 +14,23 @@
         </a>
       </div>
       <!--注册成功时显示-->
+      <div class="mceng1 fixed1"></div>
       <div class="cont cont3" style="display:none">
         <div class="quan">
           欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
         </div>
-        <a href="javascript:void(0);" v-on:click="down()" class="bt bt4"><img src="../assets/img/b4.png" alt=""></a>
+        <!-- <a href="javascript:void(0);" v-on:click="down()" class="bt bt4"><img src="../assets/img/b4.png" alt=""></a> -->
       </div>
+<!--       <div class="mceng1 fixed"></div>
+ -->
+    <div class="login1 share-login1">
+      <p id="sweetAlert">
+        欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
+      </p>
+      <button v-on:click="iconClose1()" id="confirm">确定</button>
     </div>
+    </div>
+    <!-- <button v-on:click="show()">clickMe</button> -->
     <div class="downapp">
       <img src="../assets/img/warp_yaoqing2.png"/>
       <img class="app" v-on:click="down()" src="../assets/img/warp_xiazai.png"/>
@@ -87,6 +97,9 @@
     methods: {
       iconClose: function () {
         $(".mceng.fixed,.share-login,.icon-close").hide();
+      },
+      iconClose1: function () {
+        $(".mceng.fixed,.share-login1").hide();
       },
       warn_hide: function () {
         $("#warn").fadeOut(1000);
@@ -219,6 +232,7 @@
           password: password1
         }).then(function (res) {
           if ("ok" == res.data.end) {
+            $(".mceng.fixed,.share-login1,.icon-close").show();
             $(".mceng.fixed,.share-login,.icon-close").hide();
             $(".cont1").hide();
             $(".cont3").show();
@@ -233,6 +247,10 @@
         }).catch(function (err) {
           console.log(err)
         });
+      },
+      show:function(){
+       
+
       }
     }
   }

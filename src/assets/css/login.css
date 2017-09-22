@@ -2,10 +2,13 @@
 .container{overflow:hidden;}
 /*.login{width:92%;margin:15px auto;}*/
 .login{width:86%;margin:15px auto;}
+.login1{width:86%;margin:15px auto;text-align: center;}
 .login form>p{border-bottom:1px solid #e1e1e1;}
 .login .input{/*width:100%;*/width:80%;height:44px;font-size:15px;color:#999;margin-top:15px;padding:0 40px 0 22px;letter-spacing:2px;border: 0;}
 .icon{width:16px;height:16px;position:absolute;z-index:1;top:30px;right:0;}
 .icon-close{position:absolute;top:-40px;right:1%;z-index:10002;width:25px;height:25px;background:url(../img/icon-close1.png) no-repeat scroll center center / 100% auto;display:none;}
+#sweetAlert{text-align: center;font-size: 18px;line-height: 30px;}
+#confirm{width: 90%;font-size: 18px;border-radius: 10px;color: #fff;background: #4ad8d4;border: none;}
 .icon-phone,.icon-pwd,.icon-yzm,.icon-code{left:0;}
 .pwd-reset .icon-clear{right:32px;}
 .clear-reset .icon{right:0;}
