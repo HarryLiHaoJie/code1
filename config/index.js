@@ -29,7 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/Product': {
-        target: 'http://192.168.1.19:8089/huoqService',
+        target: 'http://dev.xinhuajindian.com:8081/huoqService/',
         changeOrigin: true,
         pathRewrite: {"^/Product": "Product"}
       }
