@@ -86,11 +86,11 @@
 			<div class="cont2" style="margin-top: -1px">
 			<!--<img src="../assets/img/yaoqing2.png"/>-->
 			<!--&lt;!&ndash;<p class="inviteNum">好友扫描二维码即可分享邀请码: <span>{{ invit }}</span></p>&ndash;&gt;-->
-			<div style="float: left;margin-left: 10px;margin-top: 60px;">
-				<img src="../assets/img/1/2.png" style="width: 170px;"/>
+			<div style="position: absolute;top: 19%;left: 5%;">
+				<img src="../assets/img/1/2.png" style="width: 150px;"/>
 			</div>
-			<div style="float: left;margin-left: 10px;margin-top: 60px;">
-				<img src="../assets/img/1/3.png" style="width: 170px;"/>
+			<div style="position: absolute;top: 19%;left: 53%;">
+				<img src="../assets/img/1/3.png" style="width: 150px;"/>
 			</div>
 			<p class="peoNum" style="left: 10%;top: 42%">{{ friend }}</p>
 			<p class="money" style="left: 58%;top: 42%">{{ money }}</p>
