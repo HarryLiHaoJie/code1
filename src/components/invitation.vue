@@ -145,7 +145,6 @@
 			<p class="po-2">邀请人奖励将会根据平台的运营情况进行相应的调整，届时以公告通知为准。</p>
 			<p class="po-3">本活动最终解释权为新华金典所有。</p>
 		</div>
-		<button class="yaoq" v-bind:disabled="dis" v-tap="{methods :invita}">邀请好友</button>
 
 		</div>
 </template>

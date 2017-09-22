@@ -16,7 +16,7 @@
       <!--注册成功时显示-->
       <div class="cont cont3" style="display:none">
         <div class="quan">
-          <img src="../assets/img/quan.png"/>
+          欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
         </div>
         <a href="javascript:void(0);" v-on:click="down()" class="bt bt4"><img src="../assets/img/b4.png" alt=""></a>
       </div>
