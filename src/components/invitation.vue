@@ -241,11 +241,9 @@
 						parameters: '{"authorization":"'+ auth +'","username":"'+ username +'"}'
 					})
 					.then(function(res) {
-						alert('good')
 						var w=$(".cont1 .ewm").width();
 	        			var wpx=w+"px";
 						if(res.data.end == 'ok'){
-							alert(_this.friend)
 							_this.invit = res.data.inviteId;
 							_this.money = res.data.inviteEarn;
 							_this.friend = res.data.inviteNum;
