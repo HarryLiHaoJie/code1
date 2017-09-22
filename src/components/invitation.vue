@@ -139,7 +139,7 @@
 			<img src="../assets/img/yaoqing4.png"/>
 			<p>被邀请好友投资成功后，邀请人奖励会显示在【发现】>【邀请好友】>【查看奖励明细】中，当月奖励将于次月10号一次性发放至邀请人的新华金典账户，届时可直接用于投资或提现。</p>
 		</div>
-		<div class="content5">
+		<div class="content5" style="height:390px;">
 			<img style="margin-bottom: 50px;" src="../assets/img/yaoqing5.png"/>
 			<p class="po-1">《中华人民共和国个人所得税法》第三条第四款规定“劳务报酬所得，适用比例税率，税率为百分之二十。对劳务报酬所得一次收入畸高的，可以实行加成征收，具体办法有国务院规定。”</p>
 			<p class="po-2">邀请人奖励将会根据平台的运营情况进行相应的调整，届时以公告通知为准。</p>
