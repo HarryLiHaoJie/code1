@@ -44,8 +44,13 @@
 .p-btn>a{display:block;width:100%;line-height:44px;text-align:center;color:#000;background:transparent;
 box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;color:#F35842;font-weight:bold;}
 /*.p-btn .b-l{border-right:1px solid #DDDDDD;color:#888888;}*/
-.downapp { position: relative;text-align: center; }
-.downapp .app { position: absolute;bottom: 20px;left: 50%;width: 66.7%;margin-left: -33.5%; }
+/*.downapp { position: relative;text-align: center; }*/
+/*.downapp .app { position: absolute;bottom: 20px;left: 50%;width: 66.7%;margin-left: -33.5%; }*/
+.downapp .app {     position: absolute;
+   bottom: -60%;
+   left: 5%;
+   width: 90.7%;
+    }
 #imgwx{background: #999 none repeat scroll 0 0;display: none; height: 100%;
     left: 0;
     opacity: 0.9;
