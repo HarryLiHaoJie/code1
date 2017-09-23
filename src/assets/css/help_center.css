@@ -1,4 +1,4 @@
-  <div class="share-container">
+
 /*CSS Reset*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border:0; font-size: 100%;font:inherit; vertical-align: baseline;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
@@ -109,17 +109,17 @@ h1 { text-align: center; line-height: 40px;color: #fff; font-size: 1em; margin: 
 .integral_detail .bottom .right1 { float: right;color: #4cb050; }
 /*邀请好友*/
 .cont1{position: relative;}
-.cont2{position: relative;height: 320px;width: 100%;background-color: #5e02c1;}
+.cont2{position: relative;width: 100%;background-color: #5e02c1;}
 
 .cont1 .ewm{position: absolute;left:50%;top: 48%;width:150px; margin-left: -80px; border: 5px solid white;}
 .cont2 .inviteNum{width: 74%;font-size: 14px;line-height: 30px;height:30px;position: absolute;
 left: 13%;top: 4px;text-align: center;color: white;}
 .cont2 .inviteNum span{color: #fbe003;}
-.cont2 .peoNum,.cont2 .money{color: #fd5c4b;width: 32%;font-size: 18px;line-height: 30px;height: 30px;text-align: center;}
+.cont2 .peoNum,.cont2 .money{color: #fff;width: 32%;font-size: 33px;line-height: 30px;height: 30px;text-align: center;}
 .cont2 .peoNum{position: absolute;left: 10%;top: 42%;text-align: center;}
 .cont2 .money{position: absolute;left: 58%;top: 42%;text-align: center;}
 .cont2 .jilu{color: #732600;font-size: 13px;position: absolute;display: block;width: 40%;
-left: 30%;bottom: 12%;text-align: center;}
+left: 30%;bottom: 64%;text-align: center;}
 .content3,.content4,.content5 { position: relative; }
 .con-bottom { position: absolute;left: 50%;top: 16%;margin-left: -42%;width: 84.1%; }
 .con-bottom p { color: #732600;font-size: 12px;line-height: 18px; }
