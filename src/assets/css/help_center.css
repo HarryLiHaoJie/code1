@@ -248,7 +248,7 @@ body>img{margin: 2% auto;}
 /*注册成功*/
 .dv-input .p-img{padding:0 14px;}
 .share-login{width:92%;position: absolute;top:40%;left:4%;z-index:10002;background:#fff;padding:0% 3% 4%;border-radius:5px;display:none;}
-.share-login1{width:92%;position: absolute;top:20%;left:4%;z-index:10002;background:#fff;padding:2% 3% 4% 3%;border-radius:5px;display:none;}
+.share-login1{width:92%;position: absolute;top:15%;left:4%;z-index:10002;background:#fff;padding:2% 3% 4% 3%;border-radius:5px;display:none;}
 
 .share-login .yzm .downTime{border:0;}
 #imgwx{background: #999 none repeat scroll 0 0;display: none; height: 100%;
