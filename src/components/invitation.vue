@@ -92,8 +92,8 @@
 			<!--<div style="position: absolute;top: 19%;left: 53%;">-->
 				<!--<img src="../assets/img/1/3.png" style="width: 150px;"/>-->
 			<!--</div>-->
-			<p class="peoNum" style="left: 10%;top: 16%">{{ friend }}</p>
-			<p class="money" style="left: 58%;top: 16%">{{ money }}</p>
+			<p class="peoNum" style="left: 10%;top: 19%">{{ friend }}</p>
+			<p class="money" style="left: 58%;top: 19%">{{ money }}</p>
 
 			<router-link :to="{ path:'./reward_detail',query:{ source:this.$route.query.source,auth:this.$route.query.auth,username:this.$route.query.username }}">
 			    <span class="jilu"><img src="../assets/img/1/0.png"/></span>
