@@ -3,8 +3,8 @@
 		<div class="mask" v-if="mask" @touchmove.prevent>
 			<div class="mask-content">
 				<div class="login_bg"><img src="../assets/img/login_bg.png"/></div>
-				<span>您还未登录，请先登录！</span>
-				<p v-on:click="nologin()">点击登录</p>
+				<span style="margin-top: 25px;margin-left: 15px">　　您还未登录，请先登录！</span>
+				<p v-on:click="nologin()" style="margin-top: 15px;margin-left: 55px">点击登录</p>
 			</div>
 		</div>
 		<!--<div class="cont1">
