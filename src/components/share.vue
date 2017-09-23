@@ -18,10 +18,11 @@
 
               <!--注册成功时显示-->
               <div class="login1 share-login1">
+              <img src="../assets/img/ok.png" alt="#" width="70">
                 <p id="sweetAlert">
                   欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
                 </p>
-                <button v-on:click="iconClose1()" id="confirm">确定</button>
+                <button v-on:click="iconClose1()" id="confirm">确 定</button>
               </div>
         </div>
 
