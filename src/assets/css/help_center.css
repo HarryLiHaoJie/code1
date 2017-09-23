@@ -1,3 +1,4 @@
+  <div class="share-container">
 /*CSS Reset*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border:0; font-size: 100%;font:inherit; vertical-align: baseline;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
@@ -179,7 +180,7 @@ position: fixed;left: 0;bottom: 0;font-size: 18px;color: white;}
 
 /*分享*/
 /*.share { overflow:hidden;background:url(../img/bg-1.png);background-size: 100% 100%;position: absolute;width: 100%;height: 100%; }*/
-/*.share-container { position: absolute;height: 100%;background: #ffbd00; }*/
+.share-container { background-image: url('../img/4.png'); }
 .theme{position:relative;overflow:hidden;}
 .theme-logo{width:97%;position:absolute;top:-3.2%;right:0;z-index:1;}
 .theme-t{width:87%;position:absolute;top:10.6%;left:6%;}
@@ -194,7 +195,14 @@ position: fixed;left: 0;bottom: 0;font-size: 18px;color: white;}
 .div-box a{display:block;width:68%;margin:4% auto;}
 /*2017-4-17 dzz*/
 .theme{position: relative;}
-.cont{width: 66%;height: 28%;position: absolute;overflow: hidden;left:17%;top:70%;}
+.cont{
+   width: 66%;
+   height: 10%;
+   position: absolute;
+   overflow: hidden;
+   left: 17%;
+   top: 28%;}
+/*.cont{width: 66%;height: 28%;position: absolute;overflow: hidden;left:17%;top:70%;}*/
 .cont>a{display: block;}
 .cont .bt>i{font-size:12px;}
 .bt{width: 100%;height: 34px;margin-bottom: 6%;}
@@ -203,10 +211,10 @@ text-align:center;font-size:13px;}
 .bt2{height:40px;}
 .bt2 input{width: 100%;height: 40px;border-radius: 20px;/*padding: 0 16px;*/border: 0;text-align: center;
 font-size:15px;}
-.cont .bt3{margin-bottom: 0;}
+.cont .bt3{margin-bottom: 0;margin-top: 10%;}
 .cont .bt4{margin-bottom: 0;}
 .bt5{width: 66%;display: block;margin: 2% auto 4%;background: url(../img/down-app.png) no-repeat left top;background-size: 100% 100%;}
-.quan{margin-bottom: 6%;}
+.quan{position: absolute;top:30%;left:5%;width: 90%;font-size: 18px;background: #fff;text-align: center;line-height: 30px;}
 .quan>img{height: 78px;}
 body>img{margin: 2% auto;}
 @media screen and (max-width:320px ) {
@@ -224,6 +232,9 @@ body>img{margin: 2% auto;}
 /*蒙层 按钮*/
 .mceng.fixed{position:fixed;display:none;}
 .mceng{width:100%; height:100%;position:absolute;top:0;left:0;z-index:10000;background:#000;opacity:0.8;filter:alpha(opacity=80);}
+.mceng1.fixed1{position:fixed;display:none;}
+.mceng1{width:100%; height:100%;position:absolute;top:0;left:0;z-index:10000;background:#000;opacity:0.8;filter:alpha(opacity=80);}
+
 /*提示框*/
 .relative{position:relative;}
 .btn{border:1px solid #ddd;width:100%;color:inherit;}
@@ -237,6 +248,7 @@ body>img{margin: 2% auto;}
 /*注册成功*/
 .dv-input .p-img{padding:0 14px;}
 .share-login{width:92%;position: absolute;top:40%;left:4%;z-index:10002;background:#fff;padding:0% 3% 4%;border-radius:5px;display:none;}
+.share-login1{width:92%;position: absolute;top:20%;left:4%;z-index:10002;background:#fff;padding:2% 3% 4% 3%;border-radius:5px;display:none;}
 
 .share-login .yzm .downTime{border:0;}
 #imgwx{background: #999 none repeat scroll 0 0;display: none; height: 100%;

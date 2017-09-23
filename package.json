@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "fast-uglifyjs-plugin": "^0.3.0",
+    "jquery": "^3.2.1",
     "uglify-es": "github:mishoo/UglifyJS2#harmony",
     "v-tap": "^3.0.2",
     "vue": "^2.3.3",

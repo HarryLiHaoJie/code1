@@ -1,30 +1,37 @@
 <template>
-  <div class="share-container">
-    <div class="theme">
-      <img src="../assets/img/warp_yaoqing.png"/>
-      <div class="cont cont1">
-        <div class="bt bt1"><i class="um">{{ username1 }}</i>,邀您来赚钱！</div>
-        <div class="bt bt2">
-          <form action="post" class="form" id="userForm">
-            <input type="text" maxLength="11" id="phoneNum" name="" placeholder="请输入手机号领取"/>
-          </form>
+  <div class="share-container" >
+        <div class="theme" >
+            <img :src="img"/>
+
+              <div class="cont cont1">
+
+                    <div class="bt bt2">
+                      <form action="post" class="form" id="userForm">
+                        <input type="text" maxLength="11" id="phoneNum" name="" placeholder="请输入手机号码"/>
+                      </form>
+                    </div>
+                    <!-- <button v-on:click="showMsg()">clickMe</button> -->
+                    <a href="javascript:void(0);" v-on:click="regist()" class="bt bt3">
+                      <img src="../assets/img/lingqu.png" alt="">
+                    </a>
+              </div>
+
+              <!--注册成功时显示-->
+              <div class="login1 share-login1">
+                <p id="sweetAlert">
+                  欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
+                </p>
+                <button v-on:click="iconClose1()" id="confirm">确定</button>
+              </div>
         </div>
-        <a href="javascript:void(0);" v-on:click="regist()" class="bt bt3">
-          <img src="../assets/img/b3.png" alt="">
-        </a>
+
+      <div class="downapp">
+          <img class="app" src="../assets/img/zhujuan.png"/>
+          <!--<img class="app" v-on:click="down()" src="../assets/img/warp_xiazai.png"/>-->
       </div>
-      <!--注册成功时显示-->
-      <div class="cont cont3" style="display:none">
-        <div class="quan">
-          欢迎加入新华金典，您的9999元理财劵已入账，快去查看吧！
-        </div>
-        <a href="javascript:void(0);" v-on:click="down()" class="bt bt4"><img src="../assets/img/b4.png" alt=""></a>
-      </div>
-    </div>
-    <div class="downapp">
-      <img src="../assets/img/warp_yaoqing2.png"/>
-      <img class="app" v-on:click="down()" src="../assets/img/warp_xiazai.png"/>
-    </div>
+
+    <!--####################################################################################-->
+
     <!--注册提示框-->
     <div class="mceng fixed"></div>
 
@@ -60,7 +67,7 @@
       </form>
       <button class="btn pub-btn" id="regist" v-on:click="wapRegisterUser()">注册并领取奖励</button>
     </div>
-    <!--提示-->
+    <!--提示--><!--信息提示-->
     <div class="warn-prompt" id="warn">
 
     </div>
@@ -72,10 +79,12 @@
 
 <script>
   import jquery from "../../static/libs/jquery-1.11.2.min.js"
+
   export default {
     name: 'hello',
     data: function () {
       return {
+        img: require('../assets/img/zhuce_bg.png'),
         username1: this.$route.query.username
       }
     },
@@ -87,6 +96,9 @@
     methods: {
       iconClose: function () {
         $(".mceng.fixed,.share-login,.icon-close").hide();
+      },
+      iconClose1: function () {
+        $(".mceng.fixed,.share-login1").hide();
       },
       warn_hide: function () {
         $("#warn").fadeOut(1000);
@@ -219,6 +231,7 @@
           password: password1
         }).then(function (res) {
           if ("ok" == res.data.end) {
+            $(".mceng.fixed,.share-login1,.icon-close").show();
             $(".mceng.fixed,.share-login,.icon-close").hide();
             $(".cont1").hide();
             $(".cont3").show();
@@ -233,7 +246,10 @@
         }).catch(function (err) {
           console.log(err)
         });
-      }
+      },
+      // showMsg:function(){
+      //   $(".mceng.fixed,.share-login1").show();
+      // }
     }
   }
 </script>
@@ -241,4 +257,10 @@
 <style>
   @import '../assets/css/help_center.css';
   @import '../assets/css/login.css';
+
+
+
+
+
+
 </style>
